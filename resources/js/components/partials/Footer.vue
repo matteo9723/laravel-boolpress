@@ -18,6 +18,6 @@ export default {
     background-color: #333333;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 3px 0;
   }
 </style>
