@@ -13,24 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('guest.home');
-// })->name('home');
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('index');
-
 Route::middleware('auth')
-->namespace('Admin')
-->name('admin.')
-->prefix('admin')
-->group(function (){
-    Route::get('/','HomeController@index')->name('index');
+    ->namespace('Admin')
+    ->name('admin.')
+    ->prefix('admin')
+    ->group(function(){
+        Route::get('/', 'HomeController@index')->name('index');
 
-    Route::resource('/posts','PostsController');
-});
+        // qui di mettono le rotte protette da psw
+        Route::resource('/posts','PostController');
 
-Route::get('{any?}',function(){
+
+    });
+
+// IMPORTANTE!! Questa rotta deve stare in fondo, dopo tutte le altre rotte
+Route::get('{any?}', function(){
     return view('guest.home');
 })->where('any','.*')->name('home');

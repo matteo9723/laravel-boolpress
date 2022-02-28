@@ -49942,9 +49942,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laravel\laravel-api\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\laravel\laravel-api\resources\sass\admin\style.scss */"./resources/sass/admin/style.scss");
-module.exports = __webpack_require__(/*! C:\laravel\laravel-api\resources\sass\guest\style.scss */"./resources/sass/guest/style.scss");
+__webpack_require__(/*! /Users/sc/Documents/Boolean/44/laravel/laravel-api/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/sc/Documents/Boolean/44/laravel/laravel-api/resources/sass/admin/style.scss */"./resources/sass/admin/style.scss");
+module.exports = __webpack_require__(/*! /Users/sc/Documents/Boolean/44/laravel/laravel-api/resources/sass/guest/style.scss */"./resources/sass/guest/style.scss");
 
 
 /***/ })

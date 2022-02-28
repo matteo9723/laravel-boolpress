@@ -1,19 +1,20 @@
 <template>
-  <div class="container">
-    <h1>Home</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquid nulla voluptates veritatis velit vel a voluptatum corporis similique suscipit molestias rem autem temporibus veniam ut at repudiandae ab id quia nemo saepe, cum doloribus nihil! Explicabo ducimus fuga autem eligendi blanditiis voluptatem numquam exercitationem tempora ipsum officia, eveniet provident doloremque deserunt repudiandae nostrum nam. Veniam nobis rerum sint, mollitia optio quidem officiis aspernatur, quae aliquam laborum laboriosam animi odio excepturi! Veniam, dicta tempora. Enim nam animi iste possimus deserunt?
-    </p>
-  </div>
+  <main class="container">
+      <h1>Home</h1>
+      <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, ab? Laboriosam mollitia minima fugiat quam repellendus officia velit voluptatibus ullam quis, tempora, consequatur cum doloremque impedit deserunt nemo! Praesentium, quos.
+      </p>
+  </main>
 </template>
 
 <script>
 export default {
-  name:"Home"
-
+    name: 'Home'
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.container{
+    margin-top: 30px
+}
 </style>

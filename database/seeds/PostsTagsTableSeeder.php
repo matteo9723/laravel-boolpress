@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use App\Post;
 use App\Tag;
+use Illuminate\Database\Seeder;
 
 class PostsTagsTableSeeder extends Seeder
 {
@@ -13,9 +13,12 @@ class PostsTagsTableSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i < 20; $i++) { 
+        for ($i=0; $i < 20; $i++) {
+            // estraggo random un post
             $post = Post::inRandomOrder()->first();
-            $tag_id =Tag::inRandomOrder()->first()->id;
+            // estraggo random un ID di un tag
+            $tag_id = Tag::inRandomOrder()->first()->id;
+            // inserisco in dato nella tabella ponte
             $post->tags()->attach($tag_id);
         }
     }

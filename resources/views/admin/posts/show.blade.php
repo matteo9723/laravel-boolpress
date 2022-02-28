@@ -1,48 +1,48 @@
-@extends('layouts.app')
+@extends('layouts.admin')
+
 @section('content')
-
 <div class="container">
+    <div >
+        <h1>{{ $post->title }}</h1>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">id</th>
-        <th scope="col">titolo</th>
-        <th scope="col">tags</th>
-        <th scope="col">contenuto</th>
-        <th scope="col">slug</th>
-        <th scope="col">categoria</th>
-      </tr>
-    </thead>
-    <tbody>
-  
-      <tr>
-        <th scope="row">{{$post->id}}</th>
-        <td>{{$post->title}}</td>
-        <td> 
-          @forelse ($post->tags as $tag )
-            <span class="badge bg-primary">{{$tag->name}}</span>
-          @empty
-            -
-          @endforelse
-        </td>
-        <td>{{$post->content}}</td>
-        <td>{{$post->slug}}</td>
         @if ($post->category)
-          <td>{{$post->category->name}}</td>
-        @else
-          <td>-</td>
+         <h4>Categoria: {{ $post->category->name }}</h4>
         @endif
 
-        </tr>
-   
-    </tbody>
-  </table>
-  
-  <a href="{{route('admin.posts.index')}}" class="link-primary">torna indietro</a>
+        {{-- ciclo i tag presenti e se non ci sono stamo il segno meno --}}
+        @forelse ($post->tags as $tag)
+           <span class="badge bg-info">{{ $tag->name }}</span>
+        @empty
+
+        @endforelse
+
+        @if ($post->cover)
+            <div class="img">
+                <img width="800" src="{{ asset('storage/' . $post->cover ) }}" alt="{{ $post->title }}">
+                <p>{{ $post->cover_original_name }}</p>
+            </div>
+        @endif
+
+
+        <p>
+            {{ $post->content }}
+        </p>
+    </div>
+    <div class="row my-5">
+        <a href="{{ route('admin.posts.edit', $post) }}" class="btn btn-success mr-5">EDIT</a>
+        <form onsubmit="return confirm('Confermi eliminazione post: {{$post->title}}')"
+            action="{{ route('admin.posts.destroy', $post)}}" method="POST">
+                @csrf
+                @method('DELETE')
+
+                <button type="submit" class="btn btn-danger">DELETE</button>
+            </form>
+    </div>
 </div>
-
-
-
-  
 @endsection
+
+@section('title')
+    | {{ $post->title }}
+@endsection
+
+

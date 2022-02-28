@@ -13,13 +13,13 @@ class TagsTableSeeder extends Seeder
      */
     public function run()
     {
-        $tags = ['Front End','Back End','Laravel','UX','VueJS'];
-        foreach($tags as $tag){
+        $tags = ['Front End', 'Back End', 'Design', 'UX', 'Laravel', 'VueJs'];
+        foreach ($tags as $tag) {
+
             $new_tag = new Tag();
             $new_tag->name = $tag;
-            $new_tag->slug = Str::slug($new_tag->name,'-');
+            $new_tag->slug = Str::slug($new_tag->name, '-');
             $new_tag->save();
-
         }
     }
 }

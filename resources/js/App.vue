@@ -1,11 +1,15 @@
 <template>
-  <div>
-    <Header/>
 
-    <router-view></router-view>
+    <div>
 
-    <Footer/>
-  </div>
+        <Header />
+
+        <!-- qui si iniettano tutti i componenti dalle rotte -->
+        <router-view></router-view>
+
+        <Footer />
+    </div>
+
 </template>
 
 <script>
@@ -13,13 +17,11 @@ import Header from './components/partials/Header';
 import Footer from './components/partials/Footer';
 
 export default {
-  name:"App",
-  components:{
-    Header,
-    Footer,
-    
-  }
-  
+    name: "App",
+    components:{
+        Header,
+        Footer
+    }
 }
 </script>
 

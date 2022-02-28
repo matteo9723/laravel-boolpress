@@ -37268,11 +37268,6 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 /***/ }),
@@ -37351,9 +37346,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laravel\laravel-boolpress\resources\js\admin.js */"./resources/js/admin.js");
-__webpack_require__(/*! C:\laravel\laravel-boolpress\resources\sass\admin\style.scss */"./resources/sass/admin/style.scss");
-module.exports = __webpack_require__(/*! C:\laravel\laravel-boolpress\resources\sass\guest\style.scss */"./resources/sass/guest/style.scss");
+__webpack_require__(/*! /Users/sc/Documents/Boolean/44/laravel/laravel-api/resources/js/admin.js */"./resources/js/admin.js");
+__webpack_require__(/*! /Users/sc/Documents/Boolean/44/laravel/laravel-api/resources/sass/admin/style.scss */"./resources/sass/admin/style.scss");
+module.exports = __webpack_require__(/*! /Users/sc/Documents/Boolean/44/laravel/laravel-api/resources/sass/guest/style.scss */"./resources/sass/guest/style.scss");
 
 
 /***/ })

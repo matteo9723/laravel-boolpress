@@ -16,19 +16,30 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('prova', function(){
 
-    $data = [  
+    $status = 'Ok';
+
+    $user = [
         "name"=>"Ugo",
-        "lastname"=>"De Ughi"
+        "lastname"=>"De Ughi",
+        'hobbies' => [
+            'golf',
+            'culing',
+            'bocce'
+        ],
     ];
-    return response()->json($data);
+
+    return response()->json(compact('status', 'user'));
 });
 
 
 
 
+
 Route::namespace('Api')
-    ->prefix('posts')
     ->group(function(){
-        Route::get('/', 'PostController@index' );
-        Route::get('{slug}', 'PostController@show' );
+        Route::get('/posts', 'PostController@index');
+        Route::get('posts/{slug}', 'PostController@show');
+        Route::get('posts/postcategory/{slug}', 'PostController@getPostsByCategory');
+        Route::get('posts/posttag/{slug}', 'PostController@getPostsByTag');
+        Route::post('contacts/', 'ContactController@store');
     });

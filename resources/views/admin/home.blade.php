@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
@@ -14,10 +14,15 @@
                         </div>
                     @endif
 
-                   area admin
+                    Area Admin
+                    <p>Ciao {{ $user->name }}</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
+
+@section('title')
+    | Home
 @endsection
